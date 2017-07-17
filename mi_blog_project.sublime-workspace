@@ -1,0 +1,546 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/posts/models.py",
+			"settings":
+			{
+				"buffer_size": 474,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/miblog/settings.py",
+			"settings":
+			{
+				"buffer_size": 3162,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/index.html",
+			"settings":
+			{
+				"buffer_size": 338,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/posts/admin.py",
+			"settings":
+			{
+				"buffer_size": 454,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/posts/views.py",
+			"settings":
+			{
+				"buffer_size": 751,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/templates/post_detail.html",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/posts/apps.py",
+			"settings":
+			{
+				"buffer_size": 86,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/miblog/urls.py",
+			"settings":
+			{
+				"buffer_size": 948,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/posts/urls.py",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Juan/Desktop/miblog/mi_blog_project.sublime-project",
+		"/C/Users/Juan/Desktop/miblog/mi_blog_project.sublime-workspace",
+		"/C/Users/Juan/Desktop/miblog/Scripts/django-admin.py",
+		"/C/Udemy/CursoPython/Fase 4 - Temas avanzados/Tema 13 - Interfaces graficas con tkinter/prueba.py",
+		"/C/Jenkins_Server/prueba.py",
+		"/C/Jenkins_Server/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml",
+		"/C/Jenkins_Server/jenkins.xml",
+		"/C/Jenkins_Server/jenkins.war",
+		"/C/Jenkins_Server/jenkins.exe.config",
+		"/C/Jenkins_Server/config.xml",
+		"/C/AndroidProjects/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/info/activities/InfoActivity.java",
+		"/C/AndroidProjects/PaymentApplication/UILayer/src/main/res/layout/info_view.xml",
+		"/C/Calabash/features/my_first.feature",
+		"/C/AndroidProjects/DummyApp/DummyApp/features/my_first.feature",
+		"/C/AndroidProjects/PaymentApplication/UILayer/src/main/AndroidManifest.xml",
+		"/D/BACKUP/Videos/Peliculas/in english/The Lord of the Rings The Two Towers (2002) [1080p]/LOTR-TheTwoTowers.srt",
+		"/C/Users/Juan/Desktop/MobGen Interview/MobGen QA Interview/Automated MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/LoginScreen.feature",
+		"/C/Users/Juan/Desktop/MobGen QA Interview/Automated Test MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/LoginScreen.feature",
+		"/C/Users/Juan/Desktop/MobGen QA Interview/Automated Test MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/step_definitions/calabash_steps.rb",
+		"/C/Users/Juan/Desktop/MobGen Interview/Automated/PaymentScenarioTest.java",
+		"/C/Users/Juan/Desktop/MobGen Interview/Automated/Calabash/Calabash-android/example/features/Registration form.feature",
+		"/C/Users/Juan/Desktop/MobGen Interview/Automated/Calabash/Calabash-android/example/features/step_definitions/calabash_steps.rb",
+		"/C/Users/Juan/Desktop/Digicash work/strings.xml",
+		"/C/Jenkins_Server/secrets/initialAdminPassword",
+		"/C/Users/Juan/Desktop/MobGen QA Interview/Automated Test MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/app_installation_hooks.rb",
+		"/C/Users/Juan/Desktop/MobGen QA Interview/Automated Test MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/app_life_cycle_hooks.rb",
+		"/C/Users/Juan/Desktop/MobGen QA Interview/Automated Test MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/env.rb",
+		"/C/Users/Juan/Desktop/MobGen QA Interview/Automated Test MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/hooks.rb",
+		"/C/Users/Juan/Desktop/MobGen Interview/MobGen QA Interview/Automated MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/Slides presentation.feature",
+		"/C/Users/Juan/Desktop/MobGen Interview/MobGen QA Interview/Automated MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/step_definitions/calabash_steps.rb",
+		"/C/Users/Juan/Desktop/MobGen Interview/MobGen QA Interview/Automated MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/app_installation_hooks.rb",
+		"/C/Users/Juan/Desktop/MobGen Interview/MobGen QA Interview/Automated MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/app_life_cycle_hooks.rb",
+		"/C/Users/Juan/Desktop/MobGen Interview/MobGen QA Interview/Automated MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/env.rb",
+		"/C/Users/Juan/Desktop/MobGen Interview/MobGen QA Interview/Automated MobGen/Calabash-android/MobGen_Interview_Automated_Test/features/support/hooks.rb",
+		"/C/AndroidProjects/PaymentApplication/UILayer/build.gradle",
+		"/C/AndroidProjects/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/info/fragments/InfoFragment.java",
+		"/D/BACKUP/Videos/Peliculas/in english/The Lord of the Rings The Two Towers (2002) [1080p]/LOTR - The Two Towers 1080p BrRip x264.mp4",
+		"/C/Users/Juan/Desktop/gradle files to study/android app/build.gradle",
+		"/C/Users/Juan/Desktop/Kseniia about job/French for Sophie/Penguin Russian Course A Complete Course for Beginners.djvu",
+		"/C/Users/Juan/Desktop/gradle files to study/generators/build.gradle",
+		"/C/Users/Juan/Desktop/gradle files to study/android app/tasks.gradle",
+		"/C/AndroidProjects/DummyApp/DummyApp/build.gradle",
+		"/C/Users/Juan/Downloads/send_insert_comment_after.xml",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/res/layout/payment_fragment_view.xml",
+		"/C/Users/Juan/Downloads/payment_fragment_view.xml",
+		"/D/BACKUP/PFC/Unity3D projects - START TO MINE/PFC Juan Antonio Espinosa Lopez - Abril 2014/Start To Mine (Proyecto)/Assets/scripts/MapPathfinder.cs",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/build.gradle",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/tasks.gradle",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/neutralDemo/res/values/strings.xml",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/models/PaymentModel.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/models/PingAverageModel.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/adapters/PaymentBankAccountListAdapter.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/adapters/PaymentDetailsExpandableListAdapter.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/animations/AnimationsContainer.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/utils/DigicashContext.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/res/color/calendar_text_selector.xml",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/fragments/SendDetailsFragment.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/res/layout/send_status_fragment_view.xml",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/fragments/SendSummaryFragment.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/homepage/activities/HomePageActivity.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/homepage/fragments/SendFragment.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/managers/NavigationManager.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/NETWORKLayer/src/main/java/android/paymentplatform/mpulse/eu/network/mymodule/app/models/p2p/CreateP2PActivationMessage.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/NETWORKLayer/src/main/java/android/paymentplatform/mpulse/eu/network/mymodule/app/handler/DigicashServer.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/NETWORKLayer/src/main/java/android/paymentplatform/mpulse/eu/network/mymodule/app/security/HttpsClientFactory.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/DATALayer/src/main/java/android/paymentplatform/mpulse/eu/digicashandroid/data/internalmodel/BankAccount.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/java/android/paymentplatform/mpulse/eu/ui/payment/activities/PaymentActivity.java",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/UILayer/src/main/res/layout/send_details_fragment_view.xml",
+		"/D/BACKUP/PFC/Unity3D projects - START TO MINE/PFC Juan Antonio Espinosa Lopez - Abril 2014/Start To Mine (Proyecto)/Assets/scripts/CellScript.cs",
+		"/D/BACKUP/Proyectos/Android/digicash_android/PaymentApplication/gradle.properties",
+		"/C/AndroidProjects/DummyApp/DummyApp/app/build/outputs/logs/manifest-merger-bcee-debug-report.txt",
+		"/C/AndroidProjects/PaymentApplication/settings.gradle",
+		"/C/AndroidProjects/PaymentApplication/DATALayer/build.gradle",
+		"/C/AndroidProjects/PaymentApplication/NETWORKLayer/build.gradle",
+		"/C/AndroidProjects/PaymentApplication/build.gradle",
+		"/D/BACKUP/Juegos/EMULADORES + ROMs/MAME (Emulator + 3500 roms)/MAME/MAME32 plus 0.83/mame.ini",
+		"/D/BACKUP/Juegos/EMULADORES + ROMs/MAME (Emulator + 3500 roms)/MAME/MAME32 plus 0.83/cfg/default.cfg",
+		"/D/BACKUP/Juegos/EMULADORES + ROMs/MAME (Emulator + 3500 roms)/MAME/MAME32 plus 0.83/mamep.exe"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"connectionSecurity",
+			"settingsScreen",
+			"profile",
+			"profileScreen",
+			"loyaltyCardsScreen",
+			"loyalty",
+			"loyaltyAccount",
+			"bankAccountsScreen",
+			"bank",
+			"Requests",
+			"                                                                  SendFragment.SendFragmentListener{\nSendFragmentListener",
+			"SendFragmentListener",
+			"listener",
+			"listenet",
+			"listener",
+			"intent",
+			"Internt",
+			"onNormalPayment",
+			"mBtnSend",
+			"onSendButtonClicked",
+			"mBtnSend",
+			"COPYrES",
+			"GETrES"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/posts/models.py",
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								474,
+								474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/miblog/settings.py",
+					"settings":
+					{
+						"buffer_size": 3162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2204,
+								2204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/templates/index.html",
+					"settings":
+					{
+						"buffer_size": 338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								330,
+								330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/posts/admin.py",
+					"settings":
+					{
+						"buffer_size": 454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								454,
+								454
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/posts/views.py",
+					"settings":
+					{
+						"buffer_size": 751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								369,
+								369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/templates/post_detail.html",
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/posts/apps.py",
+					"settings":
+					{
+						"buffer_size": 86,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/miblog/urls.py",
+					"settings":
+					{
+						"buffer_size": 948,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								948,
+								948
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/posts/urls.py",
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 205.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true
+}
