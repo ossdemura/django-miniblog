@@ -6,7 +6,6 @@ from django.db.models.signals import pre_save
 from django.utils import timezone
 from django.utils.text import slugify
 
-
 # Create your models here.
 class PostManager(models.Manager):
     # vamos a sobreescribir managers que ya existen como por ejemplo: Posts.objects.all() o Posts.objects.create()
