@@ -1,4 +1,6 @@
 from __future__ import unicode_literals
+
+import datetime
 from django.conf import settings
 from django.db import models
 from django.core.urlresolvers import reverse
@@ -20,6 +22,12 @@ def upload_location(instance, filename):
 
 
 class Post(models.Model):
+    # Choices
+    POST_TYPE = {
+        ("P", "Personal"),
+        ("T", "Topic"),
+    }
+    type = models.CharField(max_length=1, choices=POST_TYPE, default='T')
     # default=1 hace que el usuario por defecto para ese post sera el primer superusuario (ID = 1)
     # default=1 hara que todos los post ya creados que no tengan usuario, tomen un usuario cuando se hace migrations
     # TIP: siempre que trabajamos con una db ya creada y con datos, tenemos SIEMPRE que crear un 'default' para cada nuevo campo, asi no tenemos campos NULL en la db
@@ -27,6 +35,8 @@ class Post(models.Model):
 
     titulo = models.CharField(max_length=150)
     slug = models.SlugField(unique=True)
+
+    # If the model field has blank=True, then required is set to False on the form field. Otherwise, required=True
     imagen = models.ImageField(upload_to=upload_location,
                                null=True,
                                blank=True,
@@ -36,7 +46,7 @@ class Post(models.Model):
     width_field = models.IntegerField(default=0)
     contenido = models.TextField()
     draft = models.BooleanField(default=False)
-    publish = models.DateField(auto_now=False, auto_now_add=False)
+    publish = models.DateField(auto_now=False, auto_now_add=False, default=datetime.date.today)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     actualizado = models.DateTimeField(auto_now_add=False, auto_now=True)
 
