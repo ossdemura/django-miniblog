@@ -108,9 +108,9 @@ def post_update(request, slug=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        messages.success(request, "El <a href='#'>post</a> ha sido editado", extra_tags='html_safe')
-        messages.success(request, "2do mensaje para el update del <a href='#'>post</a> - sin tag 'html_safe'", extra_tags='otro-tag')
-        messages.success(request, "3er mensaje para el update del <a href='#'>post</a> - sin tag 'html_safe'")
+        messages.success(request, "The <a href='#'>post</a> has been updated", extra_tags='html_safe')
+        # messages.success(request, "2do mensaje para el update del <a href='#'>post</a> - sin tag 'html_safe'", extra_tags='otro-tag')
+        # messages.success(request, "3er mensaje para el update del <a href='#'>post</a> - sin tag 'html_safe'")
 
         return HttpResponseRedirect(instance.get_absolute_url())
 
