@@ -16,7 +16,7 @@
 <div class="col-sm-12">
 <div class="thumbnail">
 {% if obj.imagen %}
-    <img src="{{ obj.imagen.url }}" class="img-responsive" />
+    <img src="{{ obj.imagen.url }}" class="img-responsive"/>
 {% endif %}
 <div class="caption">
     <h4><small> {{ obj.publish }} </small></h4>
@@ -33,7 +33,9 @@
 	{% endif %}
 
     <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:200 }}</p>
-    <p><a href="{{ obj.get_absolute_url }}" class="btn btn-primary" role="button">More</a></p>
+
+    <!-- 'More' button -->
+    <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">More</a></p>
 
 </div>
 </div>
