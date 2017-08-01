@@ -3,62 +3,63 @@
 {% block content %}
 
 <div class="col-sm-7 col-sm-offset-2">
-<!--<h1>{{ titulo }}</h1>-->
+    <!--<h1>{{ titulo }}</h1>-->
 
-<!--<form method="get" action="">
-    <input type='text' name='q' placeholder='Enter your key word' value='{{ request.GET.q }}' />
-    <input type="submit" value="Search post"/>
-</form>-->
+    <!--<form method="get" action="">
+        <input type='text' name='q' placeholder='Enter your key word' value='{{ request.GET.q }}' />
+        <input type="submit" value="Search post"/>
+    </form>-->
 
-{% for obj in object_list %}
-<!--{% url "posts:detail" id=obj.id %} Esta linea no es necesaria porque tenemos la get_absolute_url abajo-->
-<div class="row">
-<div class="col-sm-12">
-<div class="thumbnail">
-{% if obj.imagen %}
-    <img src="{{ obj.imagen.url }}" class="img-responsive"/>
-{% endif %}
-<div class="caption">
-    <h4><small> {{ obj.publish }} </small></h4>
-    <h3><a href='{{ obj.get_absolute_url }}'>{{ obj.titulo }}</a></h3>
+    {% for obj in object_list %}
+    <!--{% url "posts:detail" id=obj.id %} Esta linea no es necesaria porque tenemos la get_absolute_url abajo-->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="thumbnail">
+                {% if obj.imagen %}
+                    <img src="{{ obj.imagen.url }}" class="img-responsive"/>
+                {% endif %}
+                <div class="caption">
+                    <h4><small> {{ obj.publish }} </small></h4>
+                    <h3><a href='{{ obj.get_absolute_url }}'>{{ obj.titulo }}</a></h3>
 
-    {% if obj.draft %} <h4>DRAFT</h4> {% endif %}
-    {% if obj.publish > today %} <h4>FUTURE POST</h4> {% endif %}
+                    {% if obj.draft %} <h4><small>DRAFT</small></h4> {% endif %}
+                    {% if obj.publish > today %} <h4><small>FUTURE POST</small></h4> {% endif %}
 
-    {% if obj.user.get_full_name %}
-        <p class="lead" align='right'><small><em>by <a href="">{{ obj.user.get_full_name }}</a></em></small></p>
-		<!--<p align='right'> Author: {{ obj.user.get_full_name }}</p>-->
-	{% else %}
-		<p align='right'> Author: {{ obj.user }}</p>
-	{% endif %}
+                    {% if obj.user.get_full_name %}
+                        <p class="lead" align='right'><small>
+                            <em>by <a href="">{{ obj.user.get_full_name }}</a></em></small></p>
+		                <!--<p align='right'> Author: {{ obj.user.get_full_name }}</p>-->
+	                {% else %}
+		                <p align='right'> Author: {{ obj.user }}</p>
+	                {% endif %}
 
-    <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:500 }}</p>
+                    <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:500 }}</p>
 
-    <!-- 'More' button -->
-    <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">More</a></p>
+                    <!-- 'More' button -->
+                    <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">More</a></p>
 
-</div>
-</div>
-</div>
-<hr/>
-</div>
-{% endfor %}
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+    {% endfor %}
 
-<div class="pagination">
-    <span class="step-links">
-        {% if object_list.has_previous %}
-            <a href="?page={{ object_list.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">previous</a>
-        {% endif %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if object_list.has_previous %}
+                <a href="?page={{ object_list.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">previous</a>
+            {% endif %}
 
-        <span class="current">
-            Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+            <span class="current">
+                Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+            </span>
+
+            {% if object_list.has_next %}
+                <a href="?page={{ object_list.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">next</a>
+            {% endif %}
         </span>
-
-        {% if object_list.has_next %}
-            <a href="?page={{ object_list.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">next</a>
-        {% endif %}
-    </span>
-</div>
+    </div>
 
 </div>
 
