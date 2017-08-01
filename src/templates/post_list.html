@@ -32,7 +32,7 @@
 		<p align='right'> Author: {{ obj.user }}</p>
 	{% endif %}
 
-    <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:200 }}</p>
+    <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:500 }}</p>
 
     <!-- 'More' button -->
     <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">More</a></p>

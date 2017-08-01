@@ -43,6 +43,9 @@
 
 	{{ instance.contenido }}<br/><br/><br/>
 
+	<!-- 'Edit' button -->
+    <p><a href="{{ instance.get_absolute_url }}edit" class="btn btn-default" role="button">Edit</a></p>
+
     <!-- aqui va el paso 3 del plugin social de facebook para tener el boton 'Me gusta' en nuestros posts -->
     <div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
 
