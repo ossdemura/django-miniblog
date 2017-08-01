@@ -44,7 +44,7 @@
     {{ instance.titulo|urlify|truncatechars:30 }}<br>
     -->
 
-	            {{ instance.contenido }}
+	            <p class="big"> {{ instance.contenido }} </p>
 
                 <br/><br/>
 
@@ -75,7 +75,7 @@
                 </div>
 
                 <hr/>
-                
+
 	            <!-- paso 3 del plugin social de facebook para tener comentarios en nuestros posts -->
 	            <div class="fb-comments"
                      data-href="{{ request.build_absolute_uri }}"

@@ -2,16 +2,154 @@
 
 {% block content %}
 
-<div class="col-sm-7 col-sm-offset-2">
-    <!--<h1>{{ titulo }}</h1>-->
+<div class="row">
 
-    <!--<form method="get" action="">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+
+        <h1 class="page-header">
+            Posts List
+            <small> This is the list of posts</small>
+        </h1>
+
+        <!-- List of Posts -->
+        {% for obj in object_list %}
+
+        <h2>
+            <a href='{{ obj.get_absolute_url }}'>{{ obj.titulo }}</a>
+        </h2>
+
+        {% if obj.draft %}
+            <h4><small>DRAFT</small></h4>
+        {% endif %}
+
+        {% if obj.publish > today %}
+            <h4><small>FUTURE POST</small></h4>
+        {% endif %}
+
+        {% if obj.user.get_full_name %}
+            <p class="lead" align='right'><small>by <a href="">{{ obj.user.get_full_name }}</a></small></p>
+        {% else %}
+            <p align='right'>by {{ obj.user }}</p>
+        {% endif %}
+
+        <p align='right'><span class="glyphicon glyphicon-time"></span> Posted on {{ obj.publish }}</p>
+
+        {% if obj.imagen %}
+            <hr>
+            <img class="img-responsive" src="{{ obj.imagen.url }}" alt="">
+            <hr>
+        {% endif %}
+
+        <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:700 }}</p>
+
+        <a class="btn btn-primary" href="{{ obj.get_absolute_url }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+        <hr>
+
+        {% endfor %}
+
+        <hr>
+
+        <!-- Pager -->
+        <ul class="pager">
+            {% if object_list.has_previous %}
+                <li class="previous">
+                    <a href="?page={{ object_list.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">&larr; Older</a>
+                </li>
+            {% endif %}
+
+            {% if object_list.has_next %}
+                <li class="next">
+                    <a href="?page={{ object_list.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">Newer &rarr;</a>
+                </li>
+            {% endif %}
+        </ul>
+
+    </div>
+
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+<!--        &lt;!&ndash; Blog Search Well &ndash;&gt;
+        <div class="well">
+            <h4>Blog Search</h4>
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+            &lt;!&ndash; /.input-group &ndash;&gt;
+        </div>-->
+
+        <!-- Blog Categories Well -->
+        <div class="well">
+            <h4>Blog Categories</h4>
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Category Name</a>
+                        </li>
+                        <li><a href="#">Category Name</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Category Name</a>
+                        </li>
+                        <li><a href="#">Category Name</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+
+        <!-- Side Widget Well -->
+        <div class="well">
+            <h4>Hi there!</h4>
+            <p>This is a basic blog crafted with Django 1.11 and Bootstrap with the only purpose of learning and having fun. The template used here comes from https://blackrockdigital.github.io. Check it out!</p>
+        </div>
+
+    </div>
+
+</div>
+<!-- /.row -->
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Copyright &copy; Your Website 2017</p>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</footer>
+
+
+
+<!-- =============================================================== -->
+
+
+<!--<div class="col-sm-7 col-sm-offset-2">
+    &lt;!&ndash;<h1>{{ titulo }}</h1>&ndash;&gt;
+
+    &lt;!&ndash;<form method="get" action="">
         <input type='text' name='q' placeholder='Enter your key word' value='{{ request.GET.q }}' />
         <input type="submit" value="Search post"/>
-    </form>-->
+    </form>&ndash;&gt;
 
     {% for obj in object_list %}
-    <!--{% url "posts:detail" id=obj.id %} Esta linea no es necesaria porque tenemos la get_absolute_url abajo-->
+    &lt;!&ndash;{% url "posts:detail" id=obj.id %} Esta linea no es necesaria porque tenemos la get_absolute_url abajo&ndash;&gt;
     <div class="row">
         <div class="col-sm-12">
             <div class="thumbnail">
@@ -28,14 +166,14 @@
                     {% if obj.user.get_full_name %}
                         <p class="lead" align='right'><small>
                             <em>by <a href="">{{ obj.user.get_full_name }}</a></em></small></p>
-		                <!--<p align='right'> Author: {{ obj.user.get_full_name }}</p>-->
+		                &lt;!&ndash;<p align='right'> Author: {{ obj.user.get_full_name }}</p>&ndash;&gt;
 	                {% else %}
 		                <p align='right'> Author: {{ obj.user }}</p>
 	                {% endif %}
 
                     <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:500 }}</p>
 
-                    <!-- 'More' button -->
+                    &lt;!&ndash; 'More' button &ndash;&gt;
                     <p><a href="{{ obj.get_absolute_url }}" class="btn btn-default" role="button">More</a></p>
 
                 </div>
@@ -61,7 +199,7 @@
         </span>
     </div>
 
-</div>
+</div>-->
 
 {% endblock %}
 
