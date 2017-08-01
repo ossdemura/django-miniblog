@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
+# from django.views.generic.base import TemplateView
+# from django.views.generic import RedirectView
 
 # from posts.views import post_home
 # import all views (all functions) for the app 'posts'
@@ -26,6 +28,12 @@ from posts import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^posts/', include("posts.urls", namespace='posts')),
+
+    # Might be useful to have a static page (home)
+    # url(r'^$', TemplateView.as_view(template_name='static/index.html'), name='home'),
+
+    # To redirect to http://127.0.0.1:8000/posts/
+    #url(r'', RedirectView.as_view(url='/posts/'))
 ]
 
 if settings.DEBUG:
