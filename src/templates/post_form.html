@@ -1,11 +1,22 @@
 {% extends "base.html" %}
 
+{% block head_title %}
+        Editing: {{ instance.titulo }} | {{ block.super }}
+{% endblock head_title %}
+
 {% block content %}
-	<h1>Post Form</h1>
 
-    <form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
-        {{ form.as_p }}
+    <div class="col-lg-8">
+	    <h2><small>Editing mode</small></h2>
+        <h1>{{ instance.titulo }}</h1>
 
-        <input type='submit' value="Crear Post"/>
-    </form>
+        <form method='POST' action='' enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input type='submit' value="Submit"/>
+        </form>
+
+    </div>
+
 {% endblock %}
