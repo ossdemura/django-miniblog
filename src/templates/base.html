@@ -98,9 +98,68 @@ Link to them in template this way-->
 
 {% include "messages_display.html" %}
     <div class='container'>
-        {% block content %}
-        {% endblock %}
+
+        <div class="row">
+
+            {% block content %}
+            {% endblock %}
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <!-- Blog Search Well -->
+                <div class="well">
+                    <h4>Blog Search</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Blog Categories</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <!-- Side Widget Well -->
+                <div class="well">
+                    <h4>Hi there!</h4>
+                    <p>This is a basic blog crafted with Django 1.11 and Bootstrap with the only purpose of learning and having fun. The template used here comes from https://blackrockdigital.github.io. Check it out!</p>
+                </div>
+
+            </div>
+            <!-- ./col-md-4 -->
+
+        </div>
+        <!-- /.row -->
+
     </div>
+    <!-- ./container -->
 
 <!-- jQuery -->
 <script src='{% static "js/jquery.js" %}' ></script>

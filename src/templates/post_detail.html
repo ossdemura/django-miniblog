@@ -6,16 +6,53 @@
         {{ instance.titulo }} | {{ block.super }}
 {% endblock head_title %}
 
-<style>
-    {% block style %}
-        h1 {
-            color:green;
-        }
-    {% endblock %}
-</style>
+<!-- TODO: This needs to be refactored considering the new template -->
 
 {% block content %}
-<!--<div class="col-sm-6 col-sm-offset-3">-->
+
+    <!-- Blog Entries Column -->
+    <div class="col-lg-8">
+
+        <h1 class="page-header">
+            <a href='{{ instance.get_absolute_url }}'>{{ instance.titulo }}</a>
+            {% if instance.draft %}
+                <small>DRAFT</small>
+            {% endif %}
+        </h1>
+
+        {% if instance.user.get_full_name %}
+            <p class="lead">by <a href="">{{ instance.user.get_full_name }}</a></p>
+        {% else %}
+            <p class="lead">by {{ instance.user }}</p>
+        {% endif %}
+
+        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ instance.timestamp }}</p>
+
+        <hr>
+
+        {% if instance.imagen %}
+            <img src="{{ instance.imagen.url }}" class="img-responsive" />
+        {% endif %}
+
+        <hr>
+
+        <p class="text-justify"> {{ instance.contenido }} </p>
+
+        <p align='right'>
+            <a class="btn btn-primary" href="{{ instance.get_absolute_url }}edit"
+               role="button">Edit<span class="glyphicon glyphicon-pencil-right"></span></a>
+        </p>
+
+
+    </div>
+
+{% endblock %}
+
+<!-- ===================================================================== -->
+
+
+<!--
+&lt;!&ndash;<div class="col-sm-6 col-sm-offset-3">&ndash;&gt;
 <div class="row">
     <div class="col-sm-12">
         <div class="thumbnail">
@@ -34,21 +71,21 @@
                 {% if instance.user.get_full_name %}
                     <p class="lead" align='right'>
                         <em>by <a href="">{{ instance.user.get_full_name }}</a></em></p>
-                    <!--<p align='right'> Author: {{ instance.user.get_full_name }}</p>-->
+                    &lt;!&ndash;<p align='right'> Author: {{ instance.user.get_full_name }}</p>&ndash;&gt;
                 {% else %}
                     <p align='right'> Author: {{ instance.user }}</p>
                 {% endif %}
 
-    <!--
+    &lt;!&ndash;
     {{ share_string }}<br>
     {{ instance.titulo|urlify|truncatechars:30 }}<br>
-    -->
+    &ndash;&gt;
 
 	            <p class="big"> {{ instance.contenido }} </p>
 
                 <br/><br/>
 
-                <!-- 'Edit' button -->
+                &lt;!&ndash; 'Edit' button &ndash;&gt;
                 <p align='right'><a href="{{ instance.get_absolute_url }}edit"
                                     class="btn btn-default" role="button">Edit</a></p>
 
@@ -64,7 +101,7 @@
                     </i>
                 </a>
 
-                <!-- paso 3 del plugin social de facebook para tener el boton 'Me gusta' en nuestros posts -->
+                &lt;!&ndash; paso 3 del plugin social de facebook para tener el boton 'Me gusta' en nuestros posts &ndash;&gt;
                 <div class="fb-like"
                      data-href="{{ request.build_absolute_uri }}"
                      data-layout="box_count"
@@ -76,7 +113,7 @@
 
                 <hr/>
 
-	            <!-- paso 3 del plugin social de facebook para tener comentarios en nuestros posts -->
+	            &lt;!&ndash; paso 3 del plugin social de facebook para tener comentarios en nuestros posts &ndash;&gt;
 	            <div class="fb-comments"
                      data-href="{{ request.build_absolute_uri }}"
                      data-numposts="5">
@@ -87,4 +124,4 @@
     </div>
 </div>
 
-{% endblock %}
+-->
