@@ -20,11 +20,21 @@
             {% endif %}
         </h1>
 
-        {% if instance.user.get_full_name %}
-            <p class="lead">by <a href="">{{ instance.user.get_full_name }}</a></p>
-        {% else %}
-            <p class="lead">by {{ instance.user }}</p>
-        {% endif %}
+        <div class="row">
+            <div class="col-lg-8">
+                {% if instance.user.get_full_name %}
+                    <p class="lead">by <a href="">{{ instance.user.get_full_name }}</a></p>
+                {% else %}
+                    <p class="lead">by {{ instance.user }}</p>
+                {% endif %}
+            </div>
+            <div class="col-rg-4">
+                <p align='right'>
+                    <a class="btn btn-secondary" href="{{ instance.get_absolute_url }}edit"
+                       role="button">Edit <span class="glyphicon glyphicon-pencil"></span></a>
+                </p>
+            </div>
+        </div>
 
         <p><span class="glyphicon glyphicon-time"></span> Posted on {{ instance.timestamp }}</p>
 
@@ -32,17 +42,39 @@
 
         {% if instance.imagen %}
             <img src="{{ instance.imagen.url }}" class="img-responsive" />
+            <hr>
         {% endif %}
-
-        <hr>
 
         <p class="text-justify"> {{ instance.contenido }} </p>
 
-        <p align='right'>
-            <a class="btn btn-primary" href="{{ instance.get_absolute_url }}edit"
-               role="button">Edit<span class="glyphicon glyphicon-pencil-right"></span></a>
-        </p>
+        <br>
 
+        <div>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
+                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/home?status={{ instance.titulo|urlify }} {{ request.build_absolute_uri }}">
+                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="fb-comments"
+            data-href="{{ request.build_absolute_uri }}"
+            data-numposts="5">
+        </div>
+
+        <br>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Miniblog 2017</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
 
     </div>
 

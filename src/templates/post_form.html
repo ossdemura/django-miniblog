@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
+<!-- Documentation about HTML forms from Django docs: https://docs.djangoproject.com/en/1.11/topics/forms/.
+     In HTML, a form is a collection of elements inside <form>...</form> that allow a visitor to do things
+     like enter text, select options, manipulate objects or controls, and so on, and then send that
+     information back to the server.
+     Some of these form interface elements - text input or checkboxes - are fairly simple and are built
+     into HTML itself. Others are much more complex; an interface that pops up a date picker or allows
+     you to move a slider or manipulate controls will typically use JavaScript and CSS as well as HTML
+     form <input> elements to achieve these effects.
+     -->
+
 {% block head_title %}
         Editing: {{ instance.titulo }} | {{ block.super }}
 {% endblock head_title %}
@@ -10,7 +20,9 @@
 	    <h2><small>Editing mode</small></h2>
         <h1>{{ instance.titulo }}</h1>
 
+
         <form method='POST' action='' enctype="multipart/form-data">
+
             {% csrf_token %}
             {{ form.as_p }}
 
