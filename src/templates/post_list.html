@@ -6,8 +6,20 @@
     <div class="col-md-8">
 
         <h1 class="page-header">
-            Posts List
-            <small> This is the list of posts</small>
+            <div class="row">
+                <div class="col-lg-8">
+                    Posts List
+                    <small> This is the list of posts</small>
+                </div>
+                <div class="col-rg-4">
+                    {% if request.user.is_authenticated %}
+                        <p align='right'>
+                            <a class="btn btn-secondary" href="/posts/create"
+                            role="button"><big>New Post </big><span class="glyphicon glyphicon-edit"></span></a>
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
         </h1>
 
         <!-- List of Posts -->
@@ -39,7 +51,7 @@
 
         <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:700 }}</p>
 
-        <p align='right'><a class="btn btn-secondary"
+        <p align='left'><a class="btn btn-primary"
            href="{{ obj.get_absolute_url }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 
         <hr>
