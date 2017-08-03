@@ -16,7 +16,7 @@ Link to them in template this way-->
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Custom CSS -->
-    <link href='{% static "css/blog-home.css" rel="stylesheet" %}' >
+    <link href='{% static "css/blog-home.css" %}' rel="stylesheet">
 
     <title>
         {% block head_title %}
@@ -27,7 +27,6 @@ Link to them in template this way-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href='{% static "css/base.css" %}' />-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -73,8 +72,12 @@ Link to them in template this way-->
         </div>
         <!-- /.container -->
     </nav>
-<br><br>
-<hr/>
+
+{% include "messages_display.html" %}
+<!--<br><br>
+
+<hr/>-->
+
 
 <!-- incluimos el codigo del plugin social de facebook para tener comentatios en nuestros posts: https://developers.facebook.com/docs/plugins/comments-->
 <div id="fb-root"></div>
@@ -96,7 +99,7 @@ Link to them in template this way-->
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-{% include "messages_display.html" %}
+
     <div class='container'>
 
         <div class="row">
@@ -149,7 +152,9 @@ Link to them in template this way-->
                 <!-- Side Widget Well -->
                 <div class="well">
                     <h4>Hi there!</h4>
-                    <p>This is a basic blog crafted with Django 1.11 and Bootstrap with the only purpose of learning and having fun. The template used here comes from https://blackrockdigital.github.io. Check it out!</p>
+                    <p>This is a basic blog crafted with Django 1.11 and Bootstrap with the only
+                        purpose of learning and having fun. The template used here comes from
+                        https://blackrockdigital.github.io. Check it out!</p>
                 </div>
 
             </div>
