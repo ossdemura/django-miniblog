@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 
 import datetime
+import uuid
+
 from django.conf import settings
 from django.db import models
 from django.core.urlresolvers import reverse
@@ -17,8 +19,10 @@ class PostManager(models.Manager):
     def active(self, *args, **kwargs):
         return super(PostManager, self).filter(draft=False).filter(publish__lte=timezone.now())
 
+# The upload_to can also be a callable that returns a string.
+# This callable accepts two parameters, 'instance' and 'filename'.
 def upload_location(instance, filename):
-    return "%s/%s" % (instance.id, filename)
+    return "%s/%s/%s" % (instance.slug, instance.id, filename)
 
 
 class Post(models.Model):
@@ -32,18 +36,19 @@ class Post(models.Model):
     # default=1 hara que todos los post ya creados que no tengan usuario, tomen un usuario cuando se hace migrations
     # TIP: siempre que trabajamos con una db ya creada y con datos, tenemos SIEMPRE que crear un 'default' para cada nuevo campo, asi no tenemos campos NULL en la db
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
-
     titulo = models.CharField(max_length=150)
     slug = models.SlugField(unique=True)
-
+    # We need to use UUID field as primary key to have the instance of the object (Post) created in db by the time we want to call 'upload_location' to know what file to store and where.
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    # file will be uploaded to MEDIA_ROOT/upload_location (upload_location is a callable function to obtain the upload path, including the filename)
     # If the model field has blank=True, then required is set to False on the form field. Otherwise, required=True
     imagen = models.ImageField(upload_to=upload_location,
                                null=True,
                                blank=True,
                                height_field="height_field",
                                width_field="width_field")
-    height_field = models.IntegerField(default=0, null=True)
-    width_field = models.IntegerField(default=0, null=True)
+    height_field = models.IntegerField(null=True, default=0)
+    width_field = models.IntegerField(null=True, default=0)
     contenido = models.TextField()
     draft = models.BooleanField(default=False)
     publish = models.DateField(auto_now=False, auto_now_add=False, default=datetime.date.today)
@@ -86,3 +91,5 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
         instance.slug = create_slug(instance)
 
 pre_save.connect(pre_save_post_receiver, sender=Post)
+
+

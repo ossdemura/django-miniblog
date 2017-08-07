@@ -22,7 +22,6 @@ def post_create(request):
     # if request.method == "POST":
     #     print(request.POST.get("titulo"))
     #     print(request.POST.get("contenido"))
-
     if form.is_valid():
         instance = form.save(commit=False)
         # print(form.cleaned_data.get("titulo"))

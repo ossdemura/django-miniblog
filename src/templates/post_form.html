@@ -20,12 +20,9 @@
 	    <h2><small>Editing mode</small></h2>
         <h1>{{ instance.titulo }}</h1>
 
-
         <form method='POST' action='' enctype="multipart/form-data">
-
             {% csrf_token %}
             {{ form.as_p }}
-
             <input type='submit' value="Submit"/>
         </form>
 
