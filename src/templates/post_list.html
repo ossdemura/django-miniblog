@@ -26,7 +26,7 @@
         {% for obj in object_list %}
 
         <h2>
-            <a href='{{ obj.get_absolute_url }}'>{{ obj.titulo }}</a>
+            <a id="title" href='{{ obj.get_absolute_url }}'>{{ obj.titulo }}</a>
         </h2>
 
         {% if obj.draft %}
@@ -38,20 +38,20 @@
         {% endif %}
 
         {% if obj.user.get_full_name %}
-            <p class="lead" align='right'><small>by <a href="">{{ obj.user.get_full_name }}</a></small></p>
+            <p id="author" class="lead" align='right'><small>by <a href="">{{ obj.user.get_full_name }}</a></small></p>
         {% else %}
             <p align='right'>by {{ obj.user }}</p>
         {% endif %}
 
-        <p align='right'><span class="glyphicon glyphicon-time"></span> Posted on {{ obj.publish }}</p>
+        <p id="date" align='right'><span class="glyphicon glyphicon-time"></span> Posted on {{ obj.publish }}</p>
 
         {% if obj.imagen %}
             <img class="img-responsive" src="{{ obj.imagen.url }}" alt="">
         {% endif %}
 
-        <p class="text-justify">{{ obj.contenido | linebreaks | truncatechars:700 }}</p>
+        <p id="content" class="text-justify">{{ obj.contenido | linebreaks | truncatechars:700 }}</p>
 
-        <p align='left'><a class="btn btn-primary"
+        <p align='left'><a class="btn btn-primary" id="read-more-button"
            href="{{ obj.get_absolute_url }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 
         <hr>
