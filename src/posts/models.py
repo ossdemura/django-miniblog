@@ -1,12 +1,13 @@
 from __future__ import unicode_literals
 
 import datetime
+import os
 import uuid
 
 from django.conf import settings
 from django.db import models
 from django.core.urlresolvers import reverse
-from django.db.models.signals import pre_save
+from django.db.models.signals import pre_save, pre_delete
 from django.utils import timezone
 from django.utils.text import slugify
 
@@ -91,5 +92,12 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
         instance.slug = create_slug(instance)
 
 pre_save.connect(pre_save_post_receiver, sender=Post)
+
+
+def pre_delete_post_receiver(sender, instance, *args, **kwargs):
+    if instance.imagen:
+        instance.imagen.delete(False)
+
+pre_delete.connect(pre_delete_post_receiver, sender=Post)
 
 
