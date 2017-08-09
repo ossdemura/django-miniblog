@@ -68,7 +68,7 @@
 
             {% if object_list.has_next %}
                 <li class="next">
-                    <a href="?page={{ object_list.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">Newer &rarr;</a>
+                    <a id="newer-button" href="?page={{ object_list.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">Newer &rarr;</a>
                 </li>
             {% endif %}
         </ul>
