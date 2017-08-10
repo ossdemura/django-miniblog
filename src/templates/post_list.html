@@ -14,7 +14,7 @@
                 <div class="col-rg-4">
                     {% if request.user.is_authenticated %}
                         <p align='right'>
-                            <a class="btn btn-secondary" href="/posts/create"
+                            <a id="new-post" class="btn btn-secondary" href="/posts/create"
                             role="button"><big>New Post </big><span class="glyphicon glyphicon-edit"></span></a>
                         </p>
                     {% endif %}
@@ -62,13 +62,13 @@
         <ul class="pager">
             {% if object_list.has_previous %}
                 <li class="previous">
-                    <a href="?page={{ object_list.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">&larr; Older</a>
+                    <a id="newer-button" href="?page={{ object_list.previous_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">&larr; Newer</a>
                 </li>
             {% endif %}
 
             {% if object_list.has_next %}
                 <li class="next">
-                    <a id="newer-button" href="?page={{ object_list.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">Newer &rarr;</a>
+                    <a id="older-button" href="?page={{ object_list.next_page_number }} {% if request.GET.q %}&q={{ request.GET.q }} {% endif %}">Older &rarr;</a>
                 </li>
             {% endif %}
         </ul>

@@ -33,13 +33,13 @@
                     {% if request.user.is_authenticated %}
                         <div class="col-lg-2">
                             <p>
-                                <a class="btn btn-secondary" href="{{ instance.get_absolute_url }}edit"
+                                <a id="edit-button" class="btn btn-secondary" href="{{ instance.get_absolute_url }}edit"
                                 role="button"><big>Edit </big><span class="glyphicon glyphicon-edit"></span></a>
                             </p>
                         </div>
                         <div class="col-rg-2">
                             <p>
-                                <a class="btn btn-secondary" href="{{ instance.get_absolute_url }}delete"
+                                <a id="delete-button" class="btn btn-secondary" href="{{ instance.get_absolute_url }}delete"
                                 role="button" onclick="return confirm('Are you sure you want to delete this post?')">
                                     <big>Delete </big><span class="glyphicon glyphicon-remove"></span></a>
                             </p>

@@ -1,5 +1,10 @@
 from __future__ import unicode_literals
 
+# TODO: Update the media_cdn folder everytime the name of the post is changed.
+# TODO: Check if the image exists befor updating a post (maybe you deleted it while editing the post).
+# TODO: Add something to style the post's content to make it look more readable and pro.
+# TODO: Check the Breadcrumbs Bootstrap component
+
 import datetime
 import os
 import uuid
