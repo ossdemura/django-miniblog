@@ -104,5 +104,3 @@ def pre_delete_post_receiver(sender, instance, *args, **kwargs):
         instance.imagen.delete(False)
 
 pre_delete.connect(pre_delete_post_receiver, sender=Post)
-
-

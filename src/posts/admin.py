@@ -1,6 +1,7 @@
+from __future__ import unicode_literals
+
 from django.contrib import admin
 from .models import Post  # from post.models import Post
-
 
 # Register your models here.
 
@@ -14,6 +15,6 @@ class PostModelAdmin(admin.ModelAdmin):
     class Meta:
         model = Post
 
-
 # Registrar el model en el admin
+
 admin.site.register(Post, PostModelAdmin)
