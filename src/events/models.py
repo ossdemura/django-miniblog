@@ -19,4 +19,4 @@ class Event(models.Model):
 
     def get_absolute_url(self):
         url = reverse('admin:%s_%s_change' % (self._meta.app_label, self._meta.model_name), args=[self.id])
-        return u'<a href="%s">%s</a>' % (url, str(self.start_time))
+        return u'<p><a href="%s">%s</a></p>' % (url, str(self.start_time) + " : " + str(self.end_time) + " - " + str(self.notes)  )
